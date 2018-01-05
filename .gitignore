@@ -1,0 +1,9 @@
+.idea/
+*.key
+*.pem
+*.crt
+*.csr
+/logs/mysql
+/logs/nginx
+/mysql/data
+/www*
