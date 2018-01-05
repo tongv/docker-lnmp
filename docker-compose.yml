@@ -3,8 +3,8 @@ services:
     nginx:
         image: "nginx:alpine"
         ports:
-            - "880:80"
-            - "8443:443"
+            - "80:80"
+            - "443:443"
         volumes:
             - "./www1/:/www1/"
             - "./nginx/conf.d/:/etc/nginx/conf.d/:ro"
@@ -24,7 +24,7 @@ services:
     mysql:
       image: "mysql:5.7"
       ports:
-        - "3301:3306"
+        - "3306:3306"
       volumes:
         - ./mysql/my.cnf:/etc/mysql/my.cnf:ro
         - ./mysql/data:/var/lib/mysql/:rw
@@ -35,4 +35,4 @@ services:
     redis:
       image: "redis:alpine"
       ports:
-        - "6301:6379"
+        - "6379:6379"
